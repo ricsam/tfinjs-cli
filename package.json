@@ -1,0 +1,52 @@
+{
+  "name": "tfinjs-cli",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --entry=./index.js -p --progress --config=./webpack.config.js",
+    "jsdocs": "jsdoc -t ./node_modules/minami --recurse --destination ./jsdocs --readme ./README.md src",
+    "docs": "docma && cp ./assets/favicon.ico ./docs",
+    "docs:preview": "yarn run docs && docma serve"
+  },
+  "bin": {
+    "tfinjs": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricsam/tfinjs-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ricsam/tfinjs-cli/issues"
+  },
+  "homepage": "https://github.com/ricsam/tfinjs-cli#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "tfinjs": "^0.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "docma": "^3.1.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "hcl2js": "^0.0.3",
+    "jest": "^23.6.0",
+    "jsdoc": "^3.5.5",
+    "minami": "^1.2.3",
+    "prettier": "^1.15.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
