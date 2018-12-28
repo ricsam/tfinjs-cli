@@ -1,22 +1,60 @@
 import assert from 'assert';
 import { resolve } from 'path';
 import { Deployment } from 'tfinjs';
-import { ensureDirSync, writeFileSync } from 'fs-extra';
+import { hclPrettify } from 'tfinjs/utils';
+import { ensureDirSync, writeFileSync, readFileSync } from 'fs-extra';
 
-const build = (deployment, { output }) => {
-  assert(deployment instanceof Deployment, 'deployment must be an instance of Deployment');
+const build = async (deployment, { output }) => {
+  assert(
+    deployment instanceof Deployment,
+    'deployment must be an instance of Deployment',
+  );
   assert(typeof output === 'string', 'output must be string');
   const resources = deployment.getResources();
-  resources.forEach((resource) => {
+  const newHistory = resources.reduce((map, resource) => {
+    const uri = resource.getUri();
     const name = resource.versionedName();
+    return {
+      ...map,
+      [name]: uri,
+    };
+  }, {});
 
-    const distFolder = resolve(output, name);
-    ensureDirSync(distFolder);
+  const historyFilePath = resolve(output, 'history.json');
 
-    const hcl = resource.getHcl();
+  let currentHistory = {};
+  try {
+    currentHistory = JSON.parse(readFileSync(historyFilePath));
+  } catch (err) {
+    /* do nothing */
+  }
 
-    writeFileSync(resolve(distFolder, 'main.tf'), hcl);
-  });
+  writeFileSync(
+    historyFilePath,
+    JSON.stringify(
+      {
+        ...currentHistory,
+        ...newHistory,
+      },
+      null,
+      2,
+    ),
+  );
+
+  await Promise.all(
+    resources.map(async (resource) => {
+      const name = resource.versionedName();
+
+      const distFolder = resolve(output, name);
+      ensureDirSync(distFolder);
+
+      const hcl = resource.getHcl();
+
+      const prettyHcl = await hclPrettify(hcl);
+
+      writeFileSync(resolve(distFolder, 'main.tf'), prettyHcl);
+    }),
+  );
 };
 
 export default build;

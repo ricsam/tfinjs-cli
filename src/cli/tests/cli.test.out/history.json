@@ -1,0 +1,6 @@
+{
+  "tijpetshop7b53e97e": "pet-shop/stage/v1/aws/133713371337/eu-north-1/entry.js/aws_iam_role/pets",
+  "tijpetshopb3830797": "pet-shop/stage/v1/aws/133713371337/eu-north-1/entry.js/aws_dynamodb_table/pets",
+  "tijpetshop33fbcf2a": "pet-shop/stage/v1/aws/133713371337/eu-north-1/entry.js/aws_iam_policy/cloudwatch_attachable_policy",
+  "tijpetshopc6c399d7": "pet-shop/stage/v1/aws/133713371337/eu-north-1/entry.js/aws_iam_role_policy_attachment/cloud_watch_role_attachment"
+}

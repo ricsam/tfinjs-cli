@@ -1,14 +1,16 @@
 {
   "name": "tfinjs-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --entry=./index.js -p --progress --config=./webpack.config.js",
+    "build": "webpack --entry=./src/cli/index.js -p --progress --config=./webpack.config.js && node prepend.js",
     "jsdocs": "jsdoc -t ./node_modules/minami --recurse --destination ./jsdocs --readme ./README.md src",
     "docs": "docma && cp ./assets/favicon.ico ./docs",
-    "docs:preview": "yarn run docs && docma serve"
+    "docs:preview": "yarn run docs && docma serve",
+    "start": "node dist/tfinjs.js",
+    "prepublish": "yarn run build"
   },
   "bin": {
     "tfinjs": "./dist/index.js"
@@ -25,7 +27,12 @@
   },
   "homepage": "https://pedantic-sammet-e08804.netlify.com/",
   "dependencies": {
-    "fs-extra": "^7.0.1"
+    "commander": "^2.19.0",
+    "fs-extra": "^7.0.1",
+    "memory-fs": "^0.4.1",
+    "source-map-support": "^0.5.9",
+    "webpack": "^4.28.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "peerDependencies": {
     "tfinjs": "^0.0.3"
@@ -47,9 +54,7 @@
     "jsdoc": "^3.5.5",
     "minami": "^1.2.3",
     "prettier": "^1.15.1",
-    "tfinjs": "^0.0.5",
-    "webpack": "^4.28.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-node-externals": "^1.7.2"
+    "tfinjs": "^0.0.7",
+    "webpack-cli": "^3.1.2"
   }
 }
