@@ -10,6 +10,7 @@ module.exports = {
     libraryExport: 'default',
     libraryTarget: 'commonjs2',
   },
+  target: 'node',
   externals: nodeExternals(),
   module: {
     rules: [

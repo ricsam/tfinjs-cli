@@ -5602,6 +5602,10 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
 
+tfinjs@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/tfinjs/-/tfinjs-0.0.5.tgz#074b88d03f3c4f6e43679b76dfe8dc8806fef5f1"
+
 throat@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
