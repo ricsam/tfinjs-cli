@@ -10,7 +10,7 @@
     "docs": "docma && cp ./assets/favicon.ico ./docs",
     "docs:preview": "yarn run docs && docma serve",
     "start": "node dist/tfinjs.js",
-    "prepublish": "yarn run build"
+    "prepublishOnly": "yarn run build"
   },
   "bin": {
     "tfinjs": "./dist/tfinjs.js"
