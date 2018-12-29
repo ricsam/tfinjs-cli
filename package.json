@@ -1,6 +1,6 @@
 {
   "name": "tfinjs-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "prepublish": "yarn run build"
   },
   "bin": {
-    "tfinjs": "./dist/index.js"
+    "tfinjs": "./dist/tfinjs.js"
   },
   "repository": {
     "type": "git",
@@ -54,7 +54,7 @@
     "jsdoc": "^3.5.5",
     "minami": "^1.2.3",
     "prettier": "^1.15.1",
-    "tfinjs": "^0.0.7",
+    "tfinjs": "^0.0.10",
     "webpack-cli": "^3.1.2"
   }
 }

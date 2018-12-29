@@ -2,7 +2,12 @@ import assert from 'assert';
 import { resolve } from 'path';
 import { Deployment } from 'tfinjs';
 import { hclPrettify } from 'tfinjs/utils';
-import { ensureDirSync, writeFileSync, readFileSync } from 'fs-extra';
+import {
+  mkdirpSync,
+  ensureDirSync,
+  writeFileSync,
+  readFileSync,
+} from 'fs-extra';
 
 const build = async (deployment, { output }) => {
   assert(
@@ -19,6 +24,8 @@ const build = async (deployment, { output }) => {
       [name]: uri,
     };
   }, {});
+
+  mkdirpSync(output);
 
   const historyFilePath = resolve(output, 'history.json');
 
