@@ -12,7 +12,7 @@ This is the CLI for [tfinjs](https://pedantic-sammet-e08804.netlify.com/)
 
 ## Installation
 ```bash
-npm install tfinjs tfinjs-cli
+npm install -D @tfinjs/api @tfinjs/cli
 ```
 
 ## Usage
