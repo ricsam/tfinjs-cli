@@ -357,6 +357,12 @@
     "@babel/helper-function-name" "^7.1.0"
     "@babel/helper-plugin-utils" "^7.0.0"
 
+"@babel/plugin-transform-instanceof@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-instanceof/-/plugin-transform-instanceof-7.2.0.tgz#2ee9dc9b389fa13cf325be10ff8414be0d10aecf"
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+
 "@babel/plugin-transform-literals@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-literals/-/plugin-transform-literals-7.2.0.tgz#690353e81f9267dad4fd8cfd77eafa86aba53ea1"
@@ -544,6 +550,12 @@
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.1.tgz#6402258dfe467532b26649ef076b4d11f74fb612"
   dependencies:
     defer-to-connect "^1.0.1"
+
+"@tfinjs/api@^0.0.4-beta":
+  version "0.0.4-beta"
+  resolved "https://registry.yarnpkg.com/@tfinjs/api/-/api-0.0.4-beta.tgz#99148854fedde8d598d413182be013d02f0b9964"
+  dependencies:
+    "@babel/plugin-transform-instanceof" "^7.2.0"
 
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
@@ -5605,10 +5617,6 @@ test-exclude@^4.2.1:
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
-
-tfinjs@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/tfinjs/-/tfinjs-0.0.10.tgz#df5706a57fab553bd2250c47279da87aff4d18c0"
 
 throat@^4.0.0:
   version "4.1.0"

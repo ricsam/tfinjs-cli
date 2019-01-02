@@ -1,7 +1,4 @@
 {
-  "tij93a2db55": "_/_/_/aws/133713371337/eu-north-1/_/aws_s3_bucket/terraform_state_prod",
-  "tijpetshopbfd4c895": "pet-shop/stage/v1/aws/133713371337/eu-north-1/api.js/aws_iam_role/pets",
-  "tijpetshop3ca02272": "pet-shop/stage/v1/aws/133713371337/eu-north-1/api.js/aws_dynamodb_table/pets",
-  "tijpetshop95138c7c": "pet-shop/stage/v1/aws/133713371337/eu-north-1/api.js/aws_iam_policy/cloudwatch_attachable_policy",
-  "tijpetshop885b958d": "pet-shop/stage/v1/aws/133713371337/eu-north-1/api.js/aws_iam_role_policy_attachment/cloud_watch_role_attachment"
+  "tijpetshop1a2119d5": "pet-shop/_/_/aws/13371337/eu-north-1/__tfinjs__backend__/aws_s3_bucket/terraform_state_prod",
+  "tijpetshop6b06a203": "pet-shop/prod/static/aws/13371337/eu-north-1/customers/aws_dynamodb_table/customers"
 }

@@ -1,6 +1,6 @@
 /* global __REAL_MODULE__ */
 import 'source-map-support/register';
-import { requiredParam } from 'tfinjs/utils';
+import { requiredParam } from '@tfinjs/api/utils';
 import commander from 'commander';
 import { resolve, isAbsolute } from 'path';
 import webpack from 'webpack';

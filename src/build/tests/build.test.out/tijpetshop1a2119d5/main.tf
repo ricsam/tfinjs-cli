@@ -1,6 +1,6 @@
 provider "aws" {
   assume_role = {
-    role_arn = "arn:aws:iam::133713371337:role/DeploymentRole"
+    role_arn = "arn:aws:iam::13371337:role/DeploymentRole"
   }
 
   region = "eu-north-1"
@@ -8,7 +8,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "terraform_state_prod" {
   acl    = "private"
-  bucket = "terraform-state-prod"
+  bucket = "some-backend-bucket"
 
   versioning = {
     enabled = true

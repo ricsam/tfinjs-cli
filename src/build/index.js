@@ -1,7 +1,7 @@
 import assert from 'assert';
 import { resolve } from 'path';
-import { Deployment } from 'tfinjs';
-import { hclPrettify } from 'tfinjs/utils';
+import { Project } from '@tfinjs/api';
+import { hclPrettify } from '@tfinjs/api/utils';
 import {
   mkdirpSync,
   ensureDirSync,
@@ -9,13 +9,13 @@ import {
   readFileSync,
 } from 'fs-extra';
 
-const build = async (deployment, { output }) => {
+const build = async (project, { output }) => {
   assert(
-    deployment instanceof Deployment,
-    'deployment must be an instance of Deployment',
+    project instanceof Project,
+    'project must be an instance of Project',
   );
   assert(typeof output === 'string', 'output must be string');
-  const resources = deployment.getResources();
+  const resources = project.getResources();
   const newHistory = resources.reduce((map, resource) => {
     const uri = resource.getUri();
     const name = resource.versionedName();
